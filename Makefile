@@ -3,7 +3,7 @@ target = LED_arrays_paper
 latex_cmd = pdflatex
 
 build_counter = build_counter.txt
-sources = $(target).tex preamble.tex title.tex abstract.tex
+sources = $(target).tex title.tex abstract.tex
 
 all:: $(target).pdf
 

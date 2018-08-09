@@ -5,7 +5,31 @@
 % Joe.Loughry@cs.du.edu or mailto:Joe.Loughry@gmail.com
 %
 
-\input{preamble.tex}
+\documentclass[letterpaper,journal]{IEEEtran}
+
+\usepackage[british]{babel}
+\usepackage[pdftex]{graphicx}
+
+\usepackage[obeyspaces,hyphens]{url}
+\newcommand{\URL}[1]{$\langle$\url{#1}$\rangle$}
+
+\usepackage{setspace} % for \doublespacing
+\usepackage[caption=false,font=footnotesize]{subfig} % compatible with ieeetran
+\usepackage{combelow} % for typesetting the Romainian S-comma \cb{}
+\usepackage{authblk} % for author affiliations
+\usepackage[binary-units]{siunitx} % for typesetting values with SI units
+\usepackage{array} % recommended for use with ieeetran
+\usepackage{amsmath} % recommended for use with ieeetran
+\usepackage{cite} % recommended for use with ieeetran
+\usepackage{datetime2} % all scientific papers should have a date on them
+\usepackage{float} % allow me to compel figures to go where I want them to
+\usepackage[plainpages=false,pdfpagelabels]{hyperref} % load hyperref last!
+
+\pdfoutput=1 % for arXiv
+
+% To improve line spacing in tables around a superscript (Table III)
+\newcommand\T{\rule{0pt}{2.6ex}}       % Top strut
+\newcommand\B{\rule[-1.2ex]{0pt}{0pt}} % Bottom strut
 
 \begin{document}
 
@@ -55,7 +79,7 @@ be information displayed on a computer screen or printed (Figure
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=\columnwidth]{Figure_01_small.jpg}
+    \includegraphics[width=\columnwidth]{Figure_01_smaller.jpg}
     \caption{Laser printer as a source of valuable emissions.}
     \label{figure:Figure_01}
 \end{figure}
@@ -133,10 +157,10 @@ in the oscilloscope traces of Figures
 
 \begin{figure*}[ht]
     \centering
-    \subfloat[]{\includegraphics[width=\columnwidth]{Figure_04a_small.jpg}%
+    \subfloat[]{\includegraphics[width=\columnwidth]{Figure_04a_smaller.jpg}%
     \label{figure:Figure_04a}}
     \hfill
-    \subfloat[]{\includegraphics[width=\columnwidth]{Figure_04b_small.jpg}%
+    \subfloat[]{\includegraphics[width=\columnwidth]{Figure_04b_smaller.jpg}%
     \label{figure:Figure_04b}}
     \caption{Waveforms of useful signals on pins 2 (lower trace) and 5
         (upper trace) of printer $A$ for: a) the 300\,dpi mode and the
@@ -185,10 +209,10 @@ single and dual diode laser printers \cite{Kubiak2016b}.
 
 \begin{figure*}[ht]
     \centering
-    \subfloat[]{\includegraphics[width=\columnwidth]{Figure_05a_small.jpg}%
+    \subfloat[]{\includegraphics[width=\columnwidth]{Figure_05a_smaller.jpg}%
     \label{figure:Figure_05a}}
     \hfill
-    \subfloat[]{\includegraphics[width=\columnwidth]{Figure_05b_small.jpg}%
+    \subfloat[]{\includegraphics[width=\columnwidth]{Figure_05b_smaller.jpg}%
     \label{figure:Figure_05b}}
     \caption{Waveforms of useful signals on pins 2 (lower trace) and 3 (upper
         trace) of printer $A$ for: a) the 600\,dpi mode and the Best
@@ -198,10 +222,10 @@ single and dual diode laser printers \cite{Kubiak2016b}.
 
 \begin{figure*}[ht]
     \centering
-    \subfloat[]{\includegraphics[width=\columnwidth]{Figure_06a_small.jpg}%
+    \subfloat[]{\includegraphics[width=\columnwidth]{Figure_06a_smaller.jpg}%
     \label{figure:Figure_06a}}
     \hfill
-    \subfloat[]{\includegraphics[width=\columnwidth]{Figure_06b_small.jpg}%
+    \subfloat[]{\includegraphics[width=\columnwidth]{Figure_06b_smaller.jpg}%
     \label{figure:Figure_06b}}
     \caption{Waveforms of useful signals on pins 2 (lower trace) and 3 (upper
         trace) of printer $A$ for: a) the 1200\,dpi mode and the Best
@@ -229,7 +253,7 @@ single and dual diode laser printers \cite{Kubiak2016b}.
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=\columnwidth]{Figure_09_small.jpg}
+    \includegraphics[width=\columnwidth]{Figure_09_smaller.jpg}
     \caption{Waveforms of control signals on pins 6 (lower trace) and 9
     (upper trace) of printer $A$ in 1200\,dpi mode with the Best option.}
     \label{figure:Figure_09}
@@ -353,7 +377,7 @@ further analyses are based on fragments of images
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=\columnwidth]{Figure_11_small.jpg}
+    \includegraphics[width=\columnwidth]{Figure_11_smaller.jpg}
     \caption{Waveforms of useful signals (one of the differential pairs) of
         printer $B$ for the 1200\,dpi mode and the Best option.}
     \label{figure:Figure_11}
@@ -361,7 +385,7 @@ further analyses are based on fragments of images
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=\columnwidth]{Figure_12_small.jpg}
+    \includegraphics[width=\columnwidth]{Figure_12_smaller.jpg}
     \caption{Waveforms of useful signals (one of the differential pairs) of
         printer $B$ for the 1200\,dpi mode and the Eco option.}
     \label{figure:Figure_12}
@@ -369,7 +393,7 @@ further analyses are based on fragments of images
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=\columnwidth]{Figure_13_small.jpg}
+    \includegraphics[width=\columnwidth]{Figure_13_smaller.jpg}
     \caption{Waveforms of useful signals (one of the differential pairs) of
         printer $B$ for the 600\,dpi mode and the Best option.}
     \label{figure:Figure_13}
@@ -377,7 +401,7 @@ further analyses are based on fragments of images
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=\columnwidth]{Figure_14_small.jpg}
+    \includegraphics[width=\columnwidth]{Figure_14_smaller.jpg}
     \caption{Waveforms of useful signals (one of the differential pairs) of
         printer $B$ for the 600\,dpi mode and the Eco option.}
     \label{figure:Figure_14}
@@ -485,7 +509,7 @@ that of printer $B$.
 % figure* is a two-column figure
 \begin{figure*}[ht]
     \centering
-    \includegraphics[width=\textwidth]{Figure_17_small.jpg}
+    \includegraphics[width=\textwidth]{Figure_17_much_smaller.jpg}
     \caption{Anechoic chamber where the tests were carried out.}
     \label{figure:Figure_17}
 \end{figure*}
@@ -504,7 +528,7 @@ TEMPEST computer, which is certified for electromagnetic safety.
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=\columnwidth]{Figure_18.jpg}
+    \includegraphics[width=\columnwidth]{Figure_18_smaller.jpg}
     \caption{TEMPEST Test System model DSI 1550A.}
     \label{figure:Figure_18}
 \end{figure}
@@ -519,7 +543,7 @@ becomes impossible. Results of the TEMPEST measurements are shown in Figure
 % figure* is a two-column figure
 \begin{figure*}[ht]
     \centering
-    \includegraphics[width=\textwidth]{Figure_19_small.jpg}
+    \includegraphics[width=\textwidth]{Figure_19_much_smaller.jpg}
     \caption{Radiated disturbances measured from the $A$ and $B$ printers,
         both operating in 600\,dpi mode (with Eco option); bandwidth =
         \SI{1}{\mega\hertz}.}
